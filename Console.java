@@ -4,7 +4,14 @@ import java.util.Scanner;
 public class Console{
   private Scanner leitor = new Scanner(System.in);
 
-
+    public Parcela obterParcela(){
+        System.out.println("Por favor, sr usuario, digite o seus dados da pessoa");
+        System.out.print("NOME DA PARCELA         : ");   String nomeParcela = leitor.nextLine();
+        System.out.print("TEMPO DE CRESCIMENTO    : ");   String tempoDeCescimento = leitor.nextLine();
+        System.out.print("CLIMA IDEAL PARA PARCELA: ");   int climaIdeal = leitor.nextInt();
+        Parcela p = new Parcela(nomeParcela,tempoDeCescimento,climaIdeal);
+        return(p);
+    }
 
 
 
