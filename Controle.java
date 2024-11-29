@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Controle{
   private Banco banco = null;
   private Console console = null;
@@ -5,9 +6,10 @@ public class Controle{
     console = console();
     banco = banco();
   }
-  public executar(){
+  public void executar(){
     int resposta = null;
-  
+    Parcela P;
+    ArrayList<Parcela> lista = new ArrayList<>();
   
     while(resposta != 0){
       resposta = console.menu();
